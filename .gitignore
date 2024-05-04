@@ -1,0 +1,11 @@
+tmp
+app/wire/wire_gen.go
+**/terraform.tfvars
+**/.terraform
+**/*.tfstate
+**/.env*
+**/.terraform.lock.hcl
+**/coverage.html
+**/coverage.out
+
+**/.pluralith

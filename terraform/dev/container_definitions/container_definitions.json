@@ -1,0 +1,74 @@
+[
+  {
+    "name": "dev-api",
+    "image": "878423098926.dkr.ecr.ap-northeast-1.amazonaws.com/dev-template-service-api:latest",
+    "cpu": 256,
+    "memory": 512,
+    "portMappings": [
+      {
+        "name": "dev-api-9000-tcp",
+        "containerPort": 9000,
+        "hostPort": 9000,
+        "protocol": "tcp"
+      }
+    ],
+    "essential": true,
+    "environment": [
+      {
+        "name": "SERVER_PORT",
+        "value": "9000"
+      },
+      {
+        "name": "MYSQL_DATABASE",
+        "value": "ccc"
+      },
+      {
+        "name": "MYSQL_PASSWORD",
+        "value": "eee"
+      },
+      {
+        "name": "APP_ENV",
+        "value": "development"
+      },
+      {
+        "name": "MYSQL_USER",
+        "value": "ddd"
+      },
+      {
+        "name": "MYSQL_DATABASE_REPLICA",
+        "value": "ggg"
+      },
+      {
+        "name": "MYSQL_HOST",
+        "value": "bbbb"
+      },
+      {
+        "name": "MYSQL_USER_REPLICA",
+        "value": "hhh"
+      },
+      {
+        "name": "MYSQL_PORT_REPLICA",
+        "value": "3306"
+      },
+      {
+        "name": "MYSQL_PORT",
+        "value": "3306"
+      },
+      {
+        "name": "MYSQL_ROOT_PASSWORD",
+        "value": "aaa"
+      },
+      {
+        "name": "MYSQL_PASSWORD_REPLICA",
+        "value": "iii"
+      },
+      {
+        "name": "MYSQL_HOST_REPLICA",
+        "value": "fff"
+      }
+    ],
+    "mountPoints": [],
+    "volumesFrom": [],
+    "systemControls": []
+  }
+]
