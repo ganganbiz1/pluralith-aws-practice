@@ -90,14 +90,13 @@ module "ecs" {
   ecs_execution_role_arn = module.iam.ecs_execution_role_arn
 }
 
-# RDSは時間かかるので、コメントアウト
-# module "rds" {
-#   source = "./../../modules/rds"
-#   environment = local.environment
-#   subnet_private_1a_id = module.vpc.subnet_private_1a_id
-#   subnet_private_1c_id = module.vpc.subnet_private_1c_id
-#   security_group_rds_id = module.vpc.security_group_rds_id
-# }
+module "rds" {
+  source = "./../../modules/rds"
+  environment = local.environment
+  subnet_private_1a_id = module.vpc.subnet_private_1a_id
+  subnet_private_1c_id = module.vpc.subnet_private_1c_id
+  security_group_rds_id = module.vpc.security_group_rds_id
+}
 
 module "s3" {
   source = "./../../modules/s3"
