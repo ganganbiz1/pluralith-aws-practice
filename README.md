@@ -49,7 +49,7 @@ mv pluralith-cli-graphing /usr/local/bin/
 chmod +x /usr/local/bin/pluralith-cli-graphing
 ```
 
-####　確認
+##### 確認
 以下を実行
 ```
 pluralith version
